@@ -1,0 +1,486 @@
+@charset "utf-8";
+/* @IMPORTS ------------------------------------------------------------ */
+@import url("../fonts/font-awesome-4.6.3/css/font-awesome.css");
+/*@import url("framework.css");*/
+/* RESET DEFAULT STYLES ------------------------------------------------ */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*, body{-webkit-text-size-adjust: none;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;
+    vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+input, textarea{resize: none;}
+/*END - RESET DEFAULT STYLES ------------------------------------------- */
+/* Main styles --------------------------------------------------------- */
+body{background: url("../img/backgrounds/cream_pixels.png") repeat; font-size: 100%;}
+h1, h2, h3, h4, h5 {font-family: Georgia, "Times New Roman", Times, serif;}
+.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+}
+body a, #topbar-logo:before, #topbar-logo:after{color: #FF866C;}
+.alle0915{font-size:1.5em; text-transform:uppercase; color: #252830;}
+time{text-align: right; color: #7cc576;}
+.feature-header{
+    background-image: url('../img/backgrounds/retina_wood.png');
+    text-shadow: 0.2em 0.1em 0.1em #252830;
+}
+button.btn.btn-default{
+    background: url("../img/backgrounds/dark_fish_skin.png");
+    color: #FF866C; text-shadow: none;
+}
+button.btn.btn-default:hover{
+    color: #7cc576;
+}
+#main-nav li a:hover,
+#footer-nav li a:hover{color: white; text-decoration: none;}
+
+.container .form-control:focus {
+    border-color: #7cc576;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #7cc576;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #7cc576;
+}
+
+/* Rows --------------------------------------------------------------- */
+.row0{
+    background-color: #F9F9F9;
+    color: #797979;
+    border-bottom:1px solid #D7D7D7;
+}
+.row1{
+    color:#797979;
+    background-image: url('../img/backgrounds/retina_wood.png');
+}
+.row2{color:#797979; background-color:#F9F9F9;}
+.row3{color:#797979;}
+.row4{color:#8A8A8A; background-color:#27292C;}
+.row5{color:#fff; background-color:#27292C;}
+.row5 a, .row0 a:hover, .widget a:hover, .row4 a:hover{
+    color: #7cc576; text-decoration: none;
+}
+.row2,
+.row4,
+.row5{
+    background-image: url("../img/backgrounds/dark_fish_skin.png");
+}
+
+/* Top Bar ------------------------------------------------------------ */
+.left-panel {float: left;}
+.right-panel {float: right; padding-top: 0.3em;}
+.left-panel *, .right-panel *{display: inline-block;}
+.left-panel *:last-child, .right-panel *:last-child{margin-right: 0;}
+.left-panel ul, .right-panel ul {margin: 0; padding: 0; list-style: none;}
+.left-panel li, .right-panel li {margin-right: 1.1em;}
+.left-panel li:last-child, .right-panel li:last-child {margin-right: 0;}
+#topbar {
+    font-size: 0.9em;
+    padding: 0.5em 10% 0.2em 10%;
+    text-transform: uppercase;
+    overflow: auto;
+}
+#topbar ul > li > span {margin: 0 0.1em 0 0; line-height: normal;}
+#topbar-logo{font-size:1.5em; text-transform:uppercase; font-weight: bolder}
+#topbar-logo:before{content:"["}
+#topbar-logo:after{content:"]"}
+#topbar-logo a:hover{color: #FF866C;}
+#logo-img{width: 8em; margin: auto; text-align: center;}
+#logo-img img{width:3em;}
+
+/* Header ------------------------------------------------------------ */
+#header{padding: 2em 0; text-align: center;}
+#header #logo *{margin:0; padding:0; line-height:1; color: inherit}
+#header #logo h1{
+    font-size:2.5em;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+}
+#header #logo p{
+    font-size:.9em;
+    font-style:italic;
+    margin-top:-1px;
+    text-transform:lowercase;
+}
+#header a[href='index.html']{text-decoration: none;}
+
+/* Top Navigation ----------------------------------------------------- */
+#main-nav {line-height: normal; font-family: "FontAwesome", serif;}
+#main-nav ul{text-transform:uppercase; text-align:center;}
+#main-nav li{
+    display:inline-block;
+    position:relative;
+    margin:0 2em 0 0;
+    padding:0;
+}
+#main-nav li:last-child{margin-right:0;}
+#main-nav li a{display:block; padding:1.4em 0;}
+
+/* Main container ------------------------------------------------------------------ */
+#bootstrap-container .container{margin-top: 1em; text-align: center;}
+.feature-header h2{margin: 0;}
+.feature-header {
+    margin-bottom: 2em;
+    padding: 0.8em 0;
+    text-align: center;
+    color: #797979;
+}
+#bootstrap-container img[src^='./img/circle-img_']{
+    width:13em;
+    height:13em;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+#bootstrap-container img[src^='./img/circle-img_']:hover{
+    transform: scale(1.2);
+}
+
+/* Footer -------------------------------------------------------------------------- */
+#footer{text-align: center;}
+#footer .one_quarter{
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin: 2em 0;
+    max-width: 25em;
+}
+#footer .one_quarter:not(:last-child){margin-right: 2em;}
+#footer .title{padding:0;font-size:1.5em;text-transform:uppercase;}
+
+#footer .linklist li{
+    display:block;
+    margin-bottom: 0.9em;
+    padding:0 0 0.9em 0;
+    border-bottom: 1px solid;
+}
+#footer .linklist li address{display: inline;}
+#footer .linklist li:last-child{margin:0; padding:0; border:none;}
+#footer .linklist li, #footer .linklist li::after{clear:both;}
+
+#footer-nav {
+    font-family: "FontAwesome", serif; text-transform:uppercase;}
+#footer-nav li a{display:block; padding:0.3em 0;}
+
+#footer input, #footer button{border: 1px solid;}
+#footer input{display:block; width:100%; padding:0.5em;}
+#footer form input{margin-bottom: 0.8em}
+#footer button{padding:0.5em 1em 0.8em; text-transform:uppercase; cursor:pointer;}
+/*Footer colors*/
+#footer .title{color:#FFFFFF;}
+#footer .linklist li{border-color:#8A8A8A;}
+#footer form legend{color: gainsboro;}
+#footer input, #footer button{border-color:transparent;}
+#footer input{color:#FFFFFF; background-color:#393C40;}
+#footer input:focus{border-color:#FF866C;}
+#footer button{color:#FFFFFF; background-color:#FF866C;}
+#footer ul article h4{font-family: "FontAwesome";}
+
+/* Copyright ---------------------------------------------------------- */
+#copyright{padding: 0.5em 10% 2em 10%; border-top:1px solid #8A8A8A;}
+#copyright *{margin:0; padding:0;}
+#copyright p a:hover{color: #ffffff; transition: 0.7s;text-decoration: none;}
+
+/* About Container ---------------------------------------------------- */
+#about > p {font-size: 1.3em; text-align: justify;}
+#about #team, #clients-about {
+    float: left;
+    width: 67%;
+    margin: 0 0 1.5em 0;
+    border-bottom: solid 1px #8A8A8A;
+}
+#about .team-member{overflow: hidden; padding: 0.5em; clear: both;}
+#about .team-member p{font-size: 1.1em;}
+#about .team-member img{float: left; width: 17em; margin-right: 1em;}
+#about .team-member:not(:last-child){margin-bottom: 1em;}
+#about .team-member:last-child{margin-bottom: 1.5em}
+
+/* Side Container ----------------------------------------------------- */
+.side-container{margin-left: 67%; width: 32%;}
+.side-container .title, .review-form .title{
+    margin: 0;
+    text-align: center;
+    font-size:0.7em;
+    text-transform:uppercase;
+    color: #797979;
+}
+.widget {margin-left: 2em; margin-bottom: 2em; border-radius: 0.5em;}
+.widget:nth-child(odd), #login-form, .widget #question-form{background-color: white;
+    border: solid 1px #8A8A8A;border-radius: 0.5em;}
+#login-form, #question-form{margin: 2em 1em; padding: 1em;}
+#login-form input[id='email'], #login-form input[id='password'] {width: 100%}
+.lost-password, .register-url{text-align: right;}
+#question-form input:not([id='question-submit']), textarea{width: 100%;}
+.events-container{margin: 0.5em 1em;}
+.events-container article{text-align: right;}
+.events-container h4{text-align: center;}
+.events-container  article p{text-align: left;}
+
+/* Reviews Container ------------------------------------------------- */
+.reviews{padding: 1em;}
+.reviews ul{margin: 0;}
+.reviews li{border-bottom: dashed 1px #8A8A8A;}
+.reviews li .rating, .reviews li .review-date{text-align: right;}
+.reviews .review-header{margin-top: 1em; margin-bottom: 0;}
+.reviews .review-content{margin-bottom: 0;}
+i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
+.review-form{margin-top: 1em;}
+.review-form legend{ margin-bottom: 0;}
+.review-form input,
+.review-form select,
+.review-form textarea,
+.review-form button{
+    width: 100%;
+}
+
+/* Sites Container --------------------------------------------------- */
+.container .row img.img-thumbnail{
+    width: 30em;
+    box-shadow: 0.4em 0.4em 0.6em gray;
+    transition-duration: 0.8s;
+}
+.container .row img.img-thumbnail:hover{
+    transform: scale(1.2);
+}
+.container .row a:hover{color: #797979; text-decoration: none;}
+.container .row a h4{color: #797979; text-shadow: 0.1em 0.1em 0.1em gray;}
+.container .row a h4:hover{text-decoration: underline;}
+.col-xs-6 a p{text-align: justify;}
+.container .row > .row {margin: 0 0 1em 0;}
+
+/* Contacts ----------------------------------------------------------- */
+#contacts-container{margin-top: 1.5em;}
+#contacts-container h3{margin-top:0;}
+#contacts-container .map{margin: 1em 0;}
+#contacts-container .map iframe{
+    width: 100%;
+    height: 25em;
+    box-shadow: 0.1em 0.1em 0.1em #797979;
+}
+#contacts-container .contact-us-form{
+    float: right;
+    width: 30em;
+    margin: 0 2em 1em 2em;
+}
+#contacts-container .company-details{margin: 0.8em 34em 0 2em; overflow: auto;}
+#contacts-container .company-details table{text-align: left;}
+#contacts-container .company-details table tr{height: 5em;}
+#contacts-container .company-details table *{vertical-align: top;}
+#contacts-container .company-details h3{width: 9em;}
+#contacts-container tr > td:first-child i{margin-right: 0.3em;}
+#contacts-container tr > td:last-child i{position: relative; top: 0.2em;}
+#contacts-container .summary > div div:first-child{
+    height: 5em;
+    width: 15em;
+    float: left;
+}
+#contacts-container .summary > div div:last-child{
+    margin-left: 15em;
+}
+#contacts-container .social{}
+/* Portfolio ---------------------------------------------------------- */
+.alle-carousel{position: relative;}
+.alle-carousel-inner {position: relative; width: 100%; overflow: hidden;}
+
+
+
+
+
+/* Social Networks --------------------------------------------------- */
+.twitter a:hover {background: #55acee;}
+.facebook a:hover {background: #3b5998;}
+.pinterest a:hover {background: #cb2026;}
+.gplus a:hover {background: #dd4b39;}
+.dribbble a:hover {background: #ea4c89;}
+.social-link{
+    padding: 3em 0;
+    margin:0 0 0 4em;
+    display:inline-block;
+    overflow:hidden;
+    list-style:none;
+}
+.social-link li{float:left;margin-right: 0.5em;}
+.social-link li a{
+    display:block;
+    width: 3em;
+    height:3em;
+    text-align:center;
+    line-height:3em;
+    font-size: 1.5em;
+    color:#fff;
+    background:#222222 url("../img/backgrounds/dark_fish_skin.png");
+    border-radius:50%;
+    transition:all 0.7s ease-in-out;
+}
+
+
+
+
+@media all and (max-width: 1010px){
+/* Contacts ----------------------------------------------------------- */
+    #contacts-container{width: 80%; margin-left: auto; margin-right: auto}
+    #contacts-container .contact-us-form{
+        float: none;
+        width:100%;
+        margin: 0;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid #797979;
+    }
+    #contacts-container .company-details{
+        width:100%;
+        margin: 0.5em 0;
+        border-bottom: 1px solid #797979;
+    }
+    #contacts-container ul.social-link{padding: 0.5em 0; margin-left: 0;}
+    #contacts-container .social{text-align: center;}
+}
+
+
+/**/
+@media all and (max-width: 47em){/* 750px */
+/* Main styles --------------------------------------------------------- */
+    .feature-header{margin-bottom: 0.5em; padding: 0.4em 0;}
+/* Rows --------------------------------------------------------------- */
+
+/* Top Bar ------------------------------------------------------------ */
+    .left-panel{margin-bottom: 0;}
+    .right-panel{padding-bottom: 0;}
+    .left-panel, .right-panel{float: none; text-align: center;}
+    #logo-img{position: absolute; left: -2em; top: 0.5em}
+/* Header ------------------------------------------------------------ */
+    #header{padding: 1em 0;}
+    #header #logo h1{
+        font-size:1.5em;
+        letter-spacing:0.1em;
+        text-transform:uppercase;
+    }
+    #header #logo p{
+        font-size:.8em;
+        font-style:italic;
+        margin-top:-1px;
+        text-transform:lowercase;
+    }
+
+/* Main container ----------------------------------------------------- */
+    #bootstrap-container .col-lg-4:not(:last-child){
+        margin-bottom: 1em;
+        border-bottom:1px solid #D7D7D7;
+    }
+    #bootstrap-container img[src^='./img/circle-img_']:hover{
+        transform: scale(1);
+    }
+
+/* About Container ---------------------------------------------------- */
+    #about #team .team-member {margin: 0;}
+    #team .team-member img {display: block; float: none; width: 75%;
+        margin: 0 auto 0.5em auto;}
+    #team .team-member h4 {text-align: center;}
+    #about #team, #about #clients-about {
+        float: none;
+        width: auto;
+        margin: 0 0 1em 0;
+        border-bottom: solid 1px #8A8A8A;
+    }
+    #about .side-container{clear: both; margin-left: 0; width: auto;}
+
+/* Side Container ----------------------------------------------------- */
+    .widget{margin: 0 0 0.8em 0;}
+    .reviews{padding: 0 0.2em;}
+
+/* Footer ------------------------------------------------------------ */
+    #footer .one_quarter{width: 45%;margin: 0;padding: 0.4em;}
+    #footer .one_quarter:nth-child(2){
+        /*display: block;*/
+    }
+
+/* Copyright ---------------------------------------------------------- */
+    #copyright{padding-left: 1em;}
+    #copyright .left-panel,
+    #copyright .right-panel{
+        text-align: left;
+    }
+/* Sites Container ---------------------------------------------------- */
+    .container .row .row .col-xs-6{
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0 0 0.5em 0;
+    }
+    .container .row .row p{padding: 0.5em; border-bottom: solid 1px #8A8A8A;}
+    .container .row .row .col-xs-6 img.img-thumbnail{width: 100%;}
+    .container .row img.img-thumbnail:hover{transform: scale(1);}
+
+/* Contacts ----------------------------------------------------------- */
+    #contacts-container{width: 100%; margin-left: auto; margin-right: auto}
+    #contacts-container .summary {padding-left: 0.5em;}
+
+}
+
+
+@media screen and (max-width: 37em){/* 600px */
+    #footer {padding: 0.2em 0 0.2em 0;}
+    .wrapper #footer .one_quarter{
+        display:block;
+        float:none;
+        width: auto;
+        margin:0 auto 0 auto;
+        padding: 0;
+    }
+}
+/*@media (min-width: 768px) {*/
+    /*.wrapper.row1, .wrapper.row2{*/
+        /*width: 750px;*/
+    /*}*/
+/*}*/
+/*@media (min-width: 992px) {*/
+    /*.wrapper.row1, .wrapper.row2{*/
+        /*width: 970px;*/
+    /*}*/
+/*}*/
+/*@media (min-width: 1200px) {*/
+    /*.wrapper.row1, .wrapper.row2{*/
+        /*width: 1170px;*/
+    /*}*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
