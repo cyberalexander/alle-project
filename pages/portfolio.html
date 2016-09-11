@@ -21,6 +21,7 @@
 
     <!-- ALLE0915 custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="../css/bootstrap-3.3.7/css/bootstrap.css">
     <!-- Optional theme -->
@@ -94,7 +95,23 @@
 <div class="container">
     <div id="portfolio">
         <div class="alle-carousel">
-
+            <header>
+                <label for="slide1">Первый слайд</label>
+                <label for="slide2">Второй слайд</label>
+                <label for="slide3">Третий слайд</label>
+            </header>
+            <input type="radio" id="slide1" name="slides" checked>
+            <section class="alle-slide alle-slide-1">
+                <h1>first slide text</h1>
+            </section>
+            <input type="radio" id="slide2" name="slides">
+            <section class="alle-slide alle-slide-2">
+                <h1>second slide text</h1>
+            </section>
+            <input type="radio" id="slide3" name="slides">
+            <section class="alle-slide alle-slide-3">
+                <h1>third slide text</h1>
+            </section>
         </div>
         <div class="movie">
             <iframe

@@ -304,10 +304,76 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 }
 #contacts-container .social{}
 /* Portfolio ---------------------------------------------------------- */
-.alle-carousel{position: relative;}
-.alle-carousel-inner {position: relative; width: 100%; overflow: hidden;}
+.alle-carousel{
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    background: #120103;
+    margin-bottom: 1em;}
+.alle-carousel header{
+    background: #3e474f;
+    box-shadow: 0 0.5em 1em #111;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100;
+    width: 100%;
+}
+.alle-carousel header label{
+    color:#78881888;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 4.25em;
+    font-size: 1em;
+    font-weight:bold;
+    padding: 0 1em;
+}
+.alle-carousel header label:hover{background: #2e353b;}
+.alle-slide{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding: 8em 1em 0;
+    background-color: #120103;
+    background-position: 50% 50%;
 
+    -webkit-background-size: cover;
+    background-size: cover;
 
+    -webkit-transition:  left 0s 0.75s;
+    -moz-transition:  left 0s 0.75s;
+    -ms-transition:  left 0s 0.75s;
+    -o-transition:  left 0s 0.75s;
+    transition: left 0s 0.75s;
+}
+.alle-slide-1{
+    background-image: url("../img/carousel/carousel_1.png");
+}
+.alle-slide-2{
+    background-image: url("../img/carousel/carousel_2.jpg");
+}
+.alle-slide-3{
+    background-image: url("../img/carousel/carousel_3.png");
+}
+.alle-slide h1{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s 0.5s, opacity 5s;
+}
+[id^="slide"]:checked + .alle-slide{
+    left: 0;
+    z-index: 100;
+    transition: left 0.6s ease-out;
+}
+[id^="slide"]:checked + .alle-slide h1{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s 0.5s;
+}
 
 
 
