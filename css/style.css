@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* @IMPORTS ------------------------------------------------------------ */
 @import url("../fonts/font-awesome-4.6.3/css/font-awesome.css");
+/*@import 'https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Slab';*/
 /*@import url("framework.css");*/
 /* RESET DEFAULT STYLES ------------------------------------------------ */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -34,8 +35,10 @@ table {border-collapse: collapse; border-spacing: 0;}
 input, textarea{resize: none;}
 /*END - RESET DEFAULT STYLES ------------------------------------------- */
 /* Main styles --------------------------------------------------------- */
-body{background: url("../img/backgrounds/cream_pixels.png") repeat; font-size: 100%;}
-h1, h2, h3, h4, h5 {font-family: Georgia, "Times New Roman", Times, serif;}
+body{
+    background: url("../img/backgrounds/cream_pixels.png") repeat;
+    font-size: 100%;
+}
 .wrapper {
     display: block;
     width: 100%;
@@ -131,7 +134,7 @@ button.btn.btn-default:hover{
 #header a[href='index.html']{text-decoration: none;}
 
 /* Top Navigation ----------------------------------------------------- */
-#main-nav {line-height: normal; font-family: "FontAwesome", serif;}
+#main-nav {line-height: normal;}
 #main-nav ul{text-transform:uppercase; text-align:center;}
 #main-nav li{
     display:inline-block;
@@ -142,7 +145,7 @@ button.btn.btn-default:hover{
 #main-nav li:last-child{margin-right:0;}
 #main-nav li a{display:block; padding:1.4em 0;}
 
-/* Main container ------------------------------------------------------------------ */
+/* Main container ------------------------------------------------------- */
 #bootstrap-container .container{margin-top: 1em; text-align: center;}
 .feature-header h2{margin: 0;}
 .feature-header {
@@ -161,7 +164,7 @@ button.btn.btn-default:hover{
     transform: scale(1.2);
 }
 
-/* Footer -------------------------------------------------------------------------- */
+/* Footer ------------------------------------------------------------- */
 #footer{text-align: center;}
 #footer .one_quarter{
     display: inline-block;
@@ -183,14 +186,17 @@ button.btn.btn-default:hover{
 #footer .linklist li:last-child{margin:0; padding:0; border:none;}
 #footer .linklist li, #footer .linklist li::after{clear:both;}
 
-#footer-nav {
-    font-family: "FontAwesome", serif; text-transform:uppercase;}
+#footer-nav {text-transform:uppercase;}
 #footer-nav li a{display:block; padding:0.3em 0;}
 
 #footer input, #footer button{border: 1px solid;}
 #footer input{display:block; width:100%; padding:0.5em;}
 #footer form input{margin-bottom: 0.8em}
-#footer button{padding:0.5em 1em 0.8em; text-transform:uppercase; cursor:pointer;}
+#footer button{
+    padding:0.5em 1em 0.8em;
+    text-transform:uppercase;
+    cursor:pointer;
+}
 /*Footer colors*/
 #footer .title{color:#FFFFFF;}
 #footer .linklist li{border-color:#8A8A8A;}
@@ -199,7 +205,6 @@ button.btn.btn-default:hover{
 #footer input{color:#FFFFFF; background-color:#393C40;}
 #footer input:focus{border-color:#FF866C;}
 #footer button{color:#FFFFFF; background-color:#FF866C;}
-#footer ul article h4{font-family: "FontAwesome";}
 
 /* Copyright ---------------------------------------------------------- */
 #copyright{padding: 0.5em 10% 2em 10%; border-top:1px solid #8A8A8A;}
@@ -230,8 +235,13 @@ button.btn.btn-default:hover{
     color: #797979;
 }
 .widget {margin-left: 2em; margin-bottom: 2em; border-radius: 0.5em;}
-.widget:nth-child(odd), #login-form, .widget #question-form{background-color: white;
-    border: solid 1px #8A8A8A;border-radius: 0.5em;}
+.widget:nth-child(odd),
+#login-form,
+.widget #question-form{
+    background-color: white;
+    border: solid 1px #8A8A8A;
+    border-radius: 0.5em;
+}
 #login-form, #question-form{margin: 2em 1em; padding: 1em;}
 #login-form input[id='email'], #login-form input[id='password'] {width: 100%}
 .lost-password, .register-url{text-align: right;}
@@ -287,7 +297,10 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     width: 30em;
     margin: 0 2em 1em 2em;
 }
-#contacts-container .company-details{margin: 0.8em 34em 0 2em; overflow: auto;}
+#contacts-container .company-details{
+    margin: 0.8em 34em 0 2em;
+    overflow: auto;
+}
 #contacts-container .company-details table{text-align: left;}
 #contacts-container .company-details table tr{height: 5em;}
 #contacts-container .company-details table *{vertical-align: top;}
@@ -303,41 +316,78 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     margin-left: 15em;
 }
 #contacts-container .social{}
+
 /* Portfolio ---------------------------------------------------------- */
-.alle-carousel{
+#portfolio .feature-header{margin-bottom:0;}
+#portfolio .partnership-steps{margin-bottom: 1em;}
+#portfolio .movie{
+    width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 0.5em;
+}
+#portfolio .partnership-steps h3{text-align: center}
+#portfolio .partnership-steps .step-number{
+    font-size: 4em;
+    text-align: center;
+    float: left;
+    width: 15%;
+}
+#portfolio .partnership-steps .step-icon{
+    float: right;
+    width: 15%;
+    text-align: center;
+    font-size: 4em;
+}
+#portfolio .partnership-steps .step-description{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+
+/* Slider---------------------------------------------------------------*/
+#portfolio .wrap{
+    width:100%;
+    height:40em;
     position: relative;
     overflow: hidden;
-    color: white;
+    color: #ffffff;
     text-align: center;
     background: #120103;
-    margin-bottom: 1em;}
-.alle-carousel header{
+    box-shadow: 0 0.5em 1em #111;
+    margin-bottom: 1em;
+}
+#portfolio .wrap header{
     background: #3e474f;
     box-shadow: 0 0.5em 1em #111;
     position: absolute;
-    top:0;
-    left:0;
-    z-index: 100;
+    top: 0;
+    left: 0;
+    z-index: 900;
     width: 100%;
 }
-.alle-carousel header label{
-    color:#78881888;
+#portfolio .wrap header label{
+    color: #788188;
     cursor: pointer;
     display: inline-block;
-    line-height: 4.25em;
-    font-size: 1em;
-    font-weight:bold;
-    padding: 0 1em;
+    line-height: 3.25em;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 1.5em;
+    margin-bottom:0;
 }
-.alle-carousel header label:hover{background: #2e353b;}
-.alle-slide{
-    height: 100%;
+#portfolio .wrap header label:hover{background: #2e353b;}
+#portfolio .slide{
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 100%;
     z-index: 10;
-    padding: 8em 1em 0;
+    padding: 16em 1em 0;
     background-color: #120103;
     background-position: 50% 50%;
 
@@ -350,32 +400,48 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     -o-transition:  left 0s 0.75s;
     transition: left 0s 0.75s;
 }
-.alle-slide-1{
-    background-image: url("../img/carousel/carousel_1.png");
-}
-.alle-slide-2{
-    background-image: url("../img/carousel/carousel_2.jpg");
-}
-.alle-slide-3{
-    background-image: url("../img/carousel/carousel_3.png");
-}
-.alle-slide h1{
+#portfolio .slide-one{background-image: url("../img/carousel/slide_1.jpg");}
+#portfolio .slide-two{background-image: url("../img/carousel/slide_2.jpg");}
+#portfolio .slide-three{background-image: url("../img/carousel/slide_3.jpg");}
+#portfolio .slide-four{background-image: url("../img/carousel/slide_4.jpg");}
+#portfolio .slide-five{background-image: url("../img/carousel/slide_5.jpg");}
+#portfolio .slide h1{
     opacity: 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
     transform: translateY(100%);
-    transition: transform 0.5s 0.5s, opacity 5s;
+    -webkit-transition: transform 0.5s 0.5s, opacity 0.8s;
+    -moz-transition: transform 0.5s 0.5s, opacity 0.8s;
+    -ms-transition: transform 0.5s 0.5s, opacity 0.8s;
+    -o-transition: transform 0.5s 0.5s, opacity 0.8s;
+    transition: transform 0.5s 0.5s, opacity 0.8s;
 }
-[id^="slide"]:checked + .alle-slide{
+#portfolio [id^='slide']:checked + .slide{
     left: 0;
     z-index: 100;
-    transition: left 0.6s ease-out;
+    -webkit-transition: left 0.65s ease-out;
+    -moz-transition: left 0.65s ease-out;
+    -ms-transition: left 0.65s ease-out;
+    -o-transition: left 0.65s ease-out;
+    transition: left 0.65s ease-out;
 }
-[id^="slide"]:checked + .alle-slide h1{
+#portfolio [id^='slide']:checked + .slide h1 {
+    font-size: 3em;
     opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
     transform: translateY(0);
-    transition: all 0.5s 0.5s;
+
+    -webkit-transition: all 1s 0.8s;
+    -moz-transition: all 1s 0.8s;
+    -ms-transition: all 1s 0.8s;
+    -o-transition: all 1s 0.8s;
+    transition: all 1s 0.8s;
 }
-
-
 
 /* Social Networks --------------------------------------------------- */
 .twitter a:hover {background: #55acee;}
@@ -535,7 +601,20 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 /*}*/
 
 
-
+/*FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS*/
+/*html body{font-family: 'Roboto Slab', serif;}*/
+/*html body h1,*/
+/*html body h2,*/
+/*html body h3,*/
+/*html body h4,*/
+/*html body h5 {font-family: Georgia, "Times New Roman", Times, serif;}*/
+html body #main-nav,
+html body #footer-nav,
+html body #footer ul article h4
+{font-family: "FontAwesome", serif;}
+#portfolio .partnership-steps .step-number{
+    font-family: 'Abril Fatface', cursive;}
+/*FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS*/
 
 
 
