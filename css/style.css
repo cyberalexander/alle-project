@@ -134,7 +134,8 @@ button.btn.btn-default:hover{
 #header a[href='index.html']{text-decoration: none;}
 
 /* Top Navigation ----------------------------------------------------- */
-#main-nav {line-height: normal;}
+#mobile-nav{display: none;}
+#main-nav {display: block; line-height: normal;}
 #main-nav ul{text-transform:uppercase; text-align:center;}
 #main-nav li{
     display:inline-block;
@@ -144,6 +145,67 @@ button.btn.btn-default:hover{
 }
 #main-nav li:last-child{margin-right:0;}
 #main-nav li a{display:block; padding:1.4em 0;}
+
+/* Mobile Navigation ---------------------------------------------------*/
+#mobile-nav {text-align: center}
+#mobile-nav .mobile-nav-outer{
+    padding:0px;
+    border-bottom:1px solid #dddddd;
+    box-shadow:0 4px 5px -3px #ececec;
+    position:relative;
+    background:#fff;
+}
+#mobile-nav .mobile-nav-list{
+    display:none;
+    position:absolute;
+    left:15%;
+    width:70%;
+    background: url("../img/backgrounds/cream_pixels.png");
+    text-align:center;
+    border-radius: 0.5em;
+}
+#mobile-nav .res-nav_click:hover + .mobile-nav-outer > .mobile-nav-list{
+    z-index: 1000;
+    display: block !important;
+    position: absolute;
+    left:15%;
+    top:-1em;
+}
+#mobile-nav .mobile-nav-list li a{
+    margin: 0.3em;
+    font-size: 1.1em;;
+    display: block;
+    line-height: 3.5em;
+    text-transform:uppercase;
+    text-decoration: none;
+    -webkit-transition:color 0.5s ease-in-out;
+    -moz-transition:color 0.5s ease-in-out;
+    -ms-transition:color 0.5s ease-in-out;
+    -o-transition:color 0.5s ease-in-out;
+    transition:color 0.5s ease-in-out;
+}
+#mobile-nav .mobile-nav-list li a:hover{
+    border-radius: 0.5em;
+    text-decoration:none;
+    color: #7cc576;
+    background: url("../img/backgrounds/dark_fish_skin.png");
+}
+#mobile-nav .res-nav_click {
+    font-size:3em;
+    text-decoration: none;
+    color: #FF866C;
+    display:block;
+    width:2em;
+    margin:auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -ms-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+#mobile-nav .res-nav_click:hover,
+#mobile-nav .res-nav_click:active,
+#mobile-nav .res-nav_click:focus {color: #7cc576;}
 
 /* Main container ------------------------------------------------------- */
 #bootstrap-container .container{margin-top: 1em; text-align: center;}
@@ -346,8 +408,6 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     margin-right: 15%;
 }
 
-
-
 /* Slider---------------------------------------------------------------*/
 #portfolio .wrap{
     width:100%;
@@ -442,6 +502,8 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     -o-transition: all 1s 0.8s;
     transition: all 1s 0.8s;
 }
+
+
 
 /* Social Networks --------------------------------------------------- */
 .twitter a:hover {background: #55acee;}
@@ -571,6 +633,16 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     #contacts-container{width: 100%; margin-left: auto; margin-right: auto}
     #contacts-container .summary {padding-left: 0.5em;}
 
+    /* Slider---------------------------------------------------------------*/
+    #portfolio .wrap header label{
+        line-height: 2.25em;
+        font-size: 1em;
+        padding: 0 1em;
+    }
+
+    /*--------------------------------------------*/
+    #mobile-nav{display: block;}
+    #main-nav {display: none; line-height: normal;}
 }
 
 
@@ -582,6 +654,11 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
         width: auto;
         margin:0 auto 0 auto;
         padding: 0;
+    }
+    #portfolio .wrap header label{
+        line-height: 1.25em;
+        font-size: 0.9em;
+        padding: 0 0.2em;
     }
 }
 /*@media (min-width: 768px) {*/
@@ -609,6 +686,7 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 /*html body h4,*/
 /*html body h5 {font-family: Georgia, "Times New Roman", Times, serif;}*/
 html body #main-nav,
+#mobile-nav .mobile-nav-list li a,
 html body #footer-nav,
 html body #footer ul article h4
 {font-family: "FontAwesome", serif;}
