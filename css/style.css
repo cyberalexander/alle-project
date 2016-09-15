@@ -166,7 +166,7 @@ button.btn.btn-default:hover{
 }
 #mobile-nav .res-nav_click:hover + .mobile-nav-outer > .mobile-nav-list{
     z-index: 1000;
-    display: block !important;
+    display: block;
     position: absolute;
     left:15%;
     top:-1em;
@@ -377,7 +377,7 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 #contacts-container .summary > div div:last-child{
     margin-left: 15em;
 }
-#contacts-container .social{}
+#contacts-container .social{margin-right:34em;}
 
 /* Portfolio ---------------------------------------------------------- */
 #portfolio .feature-header{margin-bottom:0;}
@@ -580,6 +580,9 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
         text-transform:lowercase;
     }
 
+/* Mobile Navigation ---------------------------------------------------*/
+    #mobile-nav{display: block;}
+    #main-nav {display: none;}
 /* Main container ----------------------------------------------------- */
     #bootstrap-container .col-lg-4:not(:last-child){
         margin-bottom: 1em;
@@ -632,17 +635,14 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 /* Contacts ----------------------------------------------------------- */
     #contacts-container{width: 100%; margin-left: auto; margin-right: auto}
     #contacts-container .summary {padding-left: 0.5em;}
+    #contacts-container .social{margin-right:0;}
 
-    /* Slider---------------------------------------------------------------*/
+/* Slider---------------------------------------------------------------*/
     #portfolio .wrap header label{
         line-height: 2.25em;
         font-size: 1em;
         padding: 0 1em;
     }
-
-    /*--------------------------------------------*/
-    #mobile-nav{display: block;}
-    #main-nav {display: none; line-height: normal;}
 }
 
 
