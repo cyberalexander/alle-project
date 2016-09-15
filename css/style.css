@@ -148,33 +148,39 @@ button.btn.btn-default:hover{
 
 /* Mobile Navigation ---------------------------------------------------*/
 #mobile-nav {text-align: center}
-#mobile-nav .mobile-nav-outer{
-    padding:0px;
-    border-bottom:1px solid #dddddd;
-    box-shadow:0 4px 5px -3px #ececec;
-    position:relative;
-    background:#fff;
+#mobile-nav > ul{
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-#mobile-nav .mobile-nav-list{
-    display:none;
-    position:absolute;
+#mobile-nav > ul > li > a {
+    display: block;
+    padding: 0.2em;
+    text-decoration: none;
+}
+#mobile-nav > ul > li > a:hover {
+    background-color: black;
+}
+#mobile-nav ul.mobile-nav-list {
+    display: none;
+    position: absolute;
     left:15%;
+    top: 5em;
     width:70%;
     background: url("../img/backgrounds/cream_pixels.png");
     text-align:center;
     border-radius: 0.5em;
 }
-#mobile-nav .res-nav_click:hover + .mobile-nav-outer > .mobile-nav-list{
-    z-index: 1000;
+#mobile-nav ul.mobile-nav-list > li {
     display: block;
-    position: absolute;
-    left:15%;
-    top:-1em;
 }
-#mobile-nav .mobile-nav-list li a{
+#mobile-nav ul.mobile-nav-list > li > a {
     margin: 0.3em;
     font-size: 1.1em;;
     display: block;
+    padding: 10px;
     line-height: 3.5em;
     text-transform:uppercase;
     text-decoration: none;
@@ -184,11 +190,15 @@ button.btn.btn-default:hover{
     -o-transition:color 0.5s ease-in-out;
     transition:color 0.5s ease-in-out;
 }
-#mobile-nav .mobile-nav-list li a:hover{
+#mobile-nav ul.mobile-nav-list li a:hover{
     border-radius: 0.5em;
     text-decoration:none;
     color: #7cc576;
     background: url("../img/backgrounds/dark_fish_skin.png");
+}
+#mobile-nav > ul > li:hover > ul.mobile-nav-list {
+    z-index: 1000;
+    display: block;
 }
 #mobile-nav .res-nav_click {
     font-size:3em;
