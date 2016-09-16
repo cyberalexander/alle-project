@@ -3,6 +3,9 @@
 <head>
 
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Slab" rel="stylesheet">
+    <meta http-equiv="cleartype" content="on"/>
+    <meta name="HandheldFriendly" content="True"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <!--START -> Configuration-Optimization for mobile devices-->
     <meta name="viewport"
@@ -25,14 +28,12 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-3.3.7/css/bootstrap.css">
     <!-- Optional theme -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-3.3.7/css/bootstrap-theme.css">
-    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.6.3/css/font-awesome.css">
-
-    <!--<script type="text/javascript" src="../js/main.js"></script>-->
 
 </head>
 <body>
+
 <!-- TOP-BAR ======================================================================= -->
-<div class="wrapper row0">
+    <div class="wrapper row0">
     <div id="topbar">
         <div class="left-panel">
             <div id="topbar-logo">
@@ -43,11 +44,11 @@
             <ul>
                 <li>
                     <span class="fa fa-phone"></span>
-                    <a href="tel:+375447115577">+375 (44) 711-55-77</a>
+                    <a href="tel:+375293456700">+375 (29) 345-67-00</a>
                 </li>
                 <li>
                     <span class="fa fa-envelope-o"></span>
-                    <a href="mailto:festivdom@gmail.com">festivdom@gmail.com</a>
+                    <a href="mailto:supersite@gmail.com">supersite@gmail.com</a>
                 </li>
             </ul>
         </div>
@@ -58,7 +59,7 @@
 </div>
 
 <!-- HEADER ============================================================= -->
-<div class="wrapper row1">
+    <div class="wrapper row1">
     <div id="header">
         <div id="logo">
             <h1>
@@ -69,7 +70,7 @@
 </div>
 
 <!-- NAVBAR ============================================================= -->
-<div class="wrapper row2">
+    <div class="wrapper row2">
     <nav id="main-nav">
         <ul>
             <li>
@@ -122,19 +123,40 @@
 </div>
 
 <!-- MAIN-CONTAINER ===================================================== -->
-<div class="wrapper row3">
+    <div class="wrapper row3">
     <div class="container" id="contacts-container">
             <div class="contact-us-form fadeInLeft animated">
                 <form action="../index.html" method="GET">
                     <h3>Отправьте нам сообщение</h3>
                     <div class="form-group">
-                        <input type="text" id="name" class="form-control" value="Ваше имя *" onfocus="onFocusForm()" onblur="onBlurForm()"/>
+                        <input
+                                type="text"
+                                id="name"
+                                class="form-control"
+                                value="Ваше имя *"
+                                onfocus="onFocusForm(document.getElementById(this.id));"
+                                onblur="onBlurForm(document.getElementById(this.id));"
+                        />
                     </div>
                     <div class="form-group">
-                        <input type="text" id="email" class="form-control" value="Адрес электронной почты *"/>
+                        <input
+                                type="text"
+                                id="email"
+                                class="form-control"
+                                value="Адрес электронной почты *"
+                                onfocus="onFocusForm(document.getElementById(this.id));"
+                                onblur="onBlurForm(document.getElementById(this.id));"
+                        />
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" rows="7" class="form-control">Текст сообщения *</textarea>
+                        <textarea
+                                name="message"
+                                id="message"
+                                rows="7"
+                                class="form-control"
+                                onfocus="onFocusForm(document.getElementById(this.id));"
+                                onblur="onBlurForm(document.getElementById(this.id));"
+                        >Текст сообщения *</textarea>
                     </div>
                     <button type="button" class="btn btn-default">Отправить</button>
                 </form>
@@ -215,7 +237,7 @@
 </div>
 
 <!-- Footer ============================================================= -->
-<div class="wrapper row4">
+    <div class="wrapper row4">
     <footer id="footer" >
         <div class="one_quarter">
             <h6 class="title">свяжитесь с нами</h6>
@@ -249,7 +271,7 @@
                     <a href="../index.html">на главную</a>
                 </li>
                 <li>
-                    <a href="./portfolio.html">портфолио</a>
+                    <a href="./portfolio.html">как мы работаем</a>
                 </li>
                 <li>
                     <a href="./released-sites.html">
@@ -270,9 +292,9 @@
             <form method="post" action="#">
                 <fieldset>
                     <legend>Newsletter:</legend>
-                    <input class="btmspace-15" type="text" value="" placeholder="Name">
-                    <input class="btmspace-15" type="text" value="" placeholder="Email">
-                    <button type="submit" value="submit">Subscribe</button>
+                    <input class="btmspace-15" type="text" value="" placeholder="Имя">
+                    <input class="btmspace-15" type="text" value="" placeholder="Адрес электронной почты">
+                    <button type="submit" value="submit">Подписаться</button>
                 </fieldset>
             </form>
         </div>
@@ -313,7 +335,7 @@
 </div>
 
 <!-- Copyright ====================================================================== -->
-<div class="wrapper row5">
+    <div class="wrapper row5">
     <div id="copyright">
         <p class="left-panel">
             Copyright &copy; 2016 - All Rights Reserved -
@@ -330,6 +352,7 @@
 <script src="../js/jquery-3.1.0.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../css/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-
+<!-- ALLE0915 custom JS -->
+<script src="../js/main.js"></script>
 </body>
 </html>

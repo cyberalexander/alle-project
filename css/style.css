@@ -2,7 +2,6 @@
 /* @IMPORTS ------------------------------------------------------------ */
 @import url("../fonts/font-awesome-4.6.3/css/font-awesome.css");
 /*@import 'https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Slab';*/
-/*@import url("framework.css");*/
 /* RESET DEFAULT STYLES ------------------------------------------------ */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -60,8 +59,10 @@ button.btn.btn-default{
     background: url("../img/backgrounds/dark_fish_skin.png");
     color: #FF866C; text-shadow: none;
 }
-button.btn.btn-default:hover{
+button.btn.btn-default:hover,
+#footer form button:hover{
     color: #7cc576;
+    transition: 0.5s;
 }
 #main-nav li a:hover,
 #footer-nav li a:hover{color: white; text-decoration: none;}
@@ -71,7 +72,7 @@ button.btn.btn-default:hover{
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #7cc576;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #7cc576;
 }
-
+input.form-control, textarea.form-control{color: #797979;}
 /* Rows --------------------------------------------------------------- */
 .row0{
     background-color: #F9F9F9;
@@ -274,7 +275,8 @@ button.btn.btn-default:hover{
 #footer .linklist li{border-color:#8A8A8A;}
 #footer form legend{color: gainsboro;}
 #footer input, #footer button{border-color:transparent;}
-#footer input{color:#FFFFFF; background-color:#393C40;}
+/*color:#FFFFFF; background-color:#393C40;*/
+#footer input{color:#FFFFFF; background-color:#8A8A8A;}
 #footer input:focus{border-color:#FF866C;}
 #footer button{color:#FFFFFF; background-color:#FF866C;}
 
@@ -328,7 +330,7 @@ button.btn.btn-default:hover{
 .reviews ul{margin: 0;}
 .reviews li{border-bottom: dashed 1px #8A8A8A;}
 .reviews li .rating, .reviews li .review-date{text-align: right;}
-.reviews .review-header{margin-top: 1em; margin-bottom: 0;}
+.reviews .review-header{margin-top: 1em; margin-bottom: 0; font-weight: bold;}
 .reviews .review-content{margin-bottom: 0;}
 i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 .review-form{margin-top: 1em;}
@@ -569,19 +571,20 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 @media all and (max-width: 47em){/* 750px */
 /* Main styles --------------------------------------------------------- */
     .feature-header{margin-bottom: 0.5em; padding: 0.4em 0;}
-/* Rows --------------------------------------------------------------- */
 
 /* Top Bar ------------------------------------------------------------ */
     .left-panel{margin-bottom: 0;}
     .right-panel{padding-bottom: 0;}
     .left-panel, .right-panel{float: none; text-align: center;}
     #logo-img{position: absolute; left: -2em; top: 0.5em}
+
 /* Header ------------------------------------------------------------ */
     #header{padding: 1em 0;}
     #header #logo h1{
         font-size:1.5em;
         letter-spacing:0.1em;
         text-transform:uppercase;
+        font-weight: 900;
     }
     #header #logo p{
         font-size:.8em;
@@ -593,6 +596,7 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 /* Mobile Navigation ---------------------------------------------------*/
     #mobile-nav{display: block;}
     #main-nav {display: none;}
+
 /* Main container ----------------------------------------------------- */
     #bootstrap-container .col-lg-4:not(:last-child){
         margin-bottom: 1em;
@@ -620,10 +624,17 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     .reviews{padding: 0 0.2em;}
 
 /* Footer ------------------------------------------------------------ */
-    #footer .one_quarter{width: 45%;margin: 0;padding: 0.4em;}
-    #footer .one_quarter:nth-child(2){
-        /*display: block;*/
+    #footer {padding: 0.2em 0 0.2em 0;}
+    .wrapper #footer .one_quarter{
+        display:block;
+        float:none;
+        max-width: 95%;
+        margin:0 auto 0 auto;
+        padding: 0.4em;
     }
+    .wrapper #footer h6.title{
+        text-align: center;}
+    .wrapper #footer .one_quarter:nth-child(2){display: none;}
 
 /* Copyright ---------------------------------------------------------- */
     #copyright{padding-left: 1em;}
@@ -631,6 +642,7 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     #copyright .right-panel{
         text-align: left;
     }
+
 /* Sites Container ---------------------------------------------------- */
     .container .row .row .col-xs-6{
         float: none;
@@ -657,39 +669,24 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
 
 
 @media screen and (max-width: 37em){/* 600px */
-    #footer {padding: 0.2em 0 0.2em 0;}
-    .wrapper #footer .one_quarter{
-        display:block;
-        float:none;
-        width: auto;
-        margin:0 auto 0 auto;
-        padding: 0;
-    }
+    /*#footer {padding: 0.2em 0 0.2em 0;}*/
+    /*.wrapper #footer .one_quarter{*/
+        /*display:block;*/
+        /*float:none;*/
+        /*width: auto;*/
+        /*margin:0 auto 0 auto;*/
+        /*padding: 0;*/
+    /*}*/
     #portfolio .wrap header label{
         line-height: 1.25em;
         font-size: 0.9em;
         padding: 0 0.2em;
     }
 }
-/*@media (min-width: 768px) {*/
-    /*.wrapper.row1, .wrapper.row2{*/
-        /*width: 750px;*/
-    /*}*/
-/*}*/
-/*@media (min-width: 992px) {*/
-    /*.wrapper.row1, .wrapper.row2{*/
-        /*width: 970px;*/
-    /*}*/
-/*}*/
-/*@media (min-width: 1200px) {*/
-    /*.wrapper.row1, .wrapper.row2{*/
-        /*width: 1170px;*/
-    /*}*/
-/*}*/
 
 
 /*FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS_FONTS*/
-/*html body{font-family: 'Roboto Slab', serif;}*/
+html body{font-family: 'Roboto Slab', serif;}
 /*html body h1,*/
 /*html body h2,*/
 /*html body h3,*/
