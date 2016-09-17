@@ -618,7 +618,12 @@ i.fa-star, i.fa-star-half-o, i.fa-star-o{font-size: 1.5em; color:#FF866C;}
     #bootstrap-container .row div.col-sm-4.col-md-4.col-lg-4 p:first-of-type{
         text-align: justify;
     }
-
+    #bootstrap-container div.row{overflow: hidden; width: 95%; margin: auto;}
+    #bootstrap-container .row div.col-sm-4.col-md-4.col-lg-4{
+        padding-right: 0;
+        width: 95%;
+        margin: 0;
+    }
 
 /* About Container ---------------------------------------------------- */
     #about #team .team-member {margin: 0;}
